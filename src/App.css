@@ -1,0 +1,446 @@
+html,
+body,
+#root
+{
+    
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background-image: url("./background.png");*/
+    background-color:black;
+    background-size: 100%;
+    /*background: radial-gradient(at 50% 100%, #2727c3 40%, #06068f 80%, #020263 100%);*/
+}
+.bg {
+  position: absolute;
+  background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
+}
+
+/* fonts.css */
+@font-face {
+  font-family: 'Sprayerz';
+  src: local('Sprayerz'), url('./fonts/Sprayerz.ttf') format('truetype');
+  /* You may add more font properties like font-weight, font-style if needed */
+}
+@font-face {
+  font-family: 'chise';
+  src: local('chise'), url('../public/fonts/chise.regular.ttf') format('truetype');
+  /* You may add more font properties like font-weight, font-style if needed */
+}
+
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Sprayerz', serif;
+  color: #fff;
+  margin-bottom: 32px !important;
+}
+
+h1 {
+  font-size: 60px !important;
+  color: white;
+  font-family: 'Sprayerz';
+  letter-spacing: 5px;
+
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+h2 {
+  font-size: 40px !important;
+  color: white;
+}
+
+a {
+  list-style: none;
+  color:white;
+  font-weight: 300;
+  
+  text-decoration: none;
+}
+
+.right{
+  float:right;
+}
+
+.navbar {
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  padding: 30px;
+  width:100%;
+  position:fixed;
+  z-index:20;
+}
+
+canvas{
+  touch-action: auto!important;
+}
+.nav-links {
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 8%;
+  transform: scaleX(1.4);
+  font-size: 18px;
+  line-height: 1.8em;
+
+}
+
+.nav-links li {
+  margin-left: 25%;
+  
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  
+
+}
+
+.nav-links a:hover {
+  color: #a4a4d1;
+  
+}
+
+.nav-links a.active::after {
+  text-decoration: dotted;
+  text-decoration: wavy;
+  color: #0000ff;
+}
+
+.left-text {
+
+  font-family: 'Roboto', sans-serif;
+  position: absolute; /* Position the element absolutely within its containing parent */
+  left: 10%; /* Adjust the left distance from the left edge of the screen */
+  padding:3%; /* Adjust the top distance from the top edge of the screen */
+  padding-top:190px;
+  font-size: 10px; /* Adjust the font size as needed */
+  color: #ffffff; /* Text color */
+  font-weight: lighter; /* Make the text bold */
+  transform: scaleX(1.5);
+  opacity:80%;
+  line-height: 1.3;
+}
+
+.logo-spcwby{
+  
+  list-style: none;
+  color:white;
+  text-decoration: none;
+  font-family: 'Sprayerz', sans-serif;
+  font-size: 38px;
+  left: 10%; 
+  position: absolute; /* Position the element absolutely within its containing parent */
+  padding-top: 30px;
+  
+}
+
+
+
+.low-opacity {
+  color: white;
+  opacity: 40%;
+}
+
+.line{
+  font-family: 'Roboto', sans-serif;
+  position: relative; /* Position the element absolutely within its containing parent */
+  top:22px;
+  left:-10px;
+  font-size: 10px; 
+  color: #ffffff; 
+  font-weight: bold;
+  transform: scaleY(5);
+  opacity:80%;
+}
+
+.photo {
+  display: inline-block;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Style the images */
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+.photo {
+  display: inline-block;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Style the images */
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@keyframes example {
+  0%   {transform: rotate(10deg);}
+  25%  {transform: rotate(0deg);}
+  50%  {transform: rotate(-10deg);}
+  75%  {transform: rotate(0deg);}
+  100% {transform: rotate(10deg);}
+}
+
+/* footer */
+.footer {
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+}
+
+
+.bodySection{
+  height:100%;
+  width:100%;
+}
+
+.headshot {
+  padding:10px;
+  border-radius: 15px;
+
+}
+
+/* Add this to your CSS or styling solution */
+.card-grid {
+  
+  display: grid;
+  row-gap: 1rem;
+  /*column-gap: 4rem;*/
+  grid-template-columns: repeat(auto-fit, 270px);
+  padding-left:13%;
+  margin-top:55vh;
+  padding-right:5%;
+ }
+ 
+ .card {
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+  /*height: 250px;
+  width: 250px;*/
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px 0px rgb(57, 55, 55) inset;
+ }
+
+ .card:hover{
+  background: #524e4e;
+ }
+
+
+ 
+ @media (max-width: 770px) {
+  /*Styles for smaller screens */
+  .card-grid {
+    
+  grid-template-columns: repeat(auto-fit, 300px);
+    padding-top:50%;
+  }
+  .card{
+    width:300px;
+    height:300px;
+  }
+ 
+ }
+
+ @media (max-width: 730px){
+
+  .navbar{
+    align-items: initial;
+    padding:0px;
+  }
+  .nav-links {
+    padding-top: 90px;
+    margin: auto;
+
+  }
+  
+  .logo-spcwby{
+    margin: auto;
+    /*left:35%;*/
+  }
+
+  .nav-links li {
+    margin-left:9%;
+  }
+ }
+
+ @media (max-width: 750px) {
+  /*Styles for smaller screens */
+  .card-grid {
+    
+  grid-template-columns: repeat(auto-fit, 260px);
+    padding-top:55%;
+  }
+  .card{
+    width:250px;
+    height:250px;
+  }
+
+
+  .MeetUs{
+    transform: scaleX(100%);
+    left:-90px;
+    bottom:30%;
+  }
+  .card-grid{
+    margin-top:0vh;
+  }
+ 
+ }
+
+ @media (max-width: 653px) {
+  /*Styles for smaller screens */
+  .card-grid {
+    
+  grid-template-columns: repeat(auto-fit, 260px);
+    padding-top:60%;
+  }
+  .card{
+    width:390px;
+    height:390px;
+  }
+
+  .MeetUs{
+    transform: scaleX(100%);
+    left:-90px;
+    bottom:30%;
+  }
+  .card-grid{
+    margin-top:5vh;
+  }
+
+ 
+ }
+
+ @media(max-width:470px){
+  .card {
+    
+    width:300px;
+    height:300px;
+  }
+ }
+
+/* stretch text */
+span.stretch {
+  display:inline-block;
+  -webkit-transform:scale(2,1); /* Safari and Chrome */
+  -moz-transform:scale(2,1); /* Firefox */
+  -ms-transform:scale(2,1); /* IE 9 */
+  -o-transform:scale(2,1); /* Opera */
+  transform:scale(2,1); /* W3C */
+}
+
+@media (max-width: 580px) {
+  .nav-links a{
+    font-size: 15px; /* Reduce the font size for smaller screens */
+    padding-right:80%;
+  }
+
+  .nav-links {
+    margin-right:20%;
+    display:initial;
+    padding-top: 45px;
+  }
+
+  .logo-spcwby{
+    position:relative;
+  }
+
+.MeetUs{
+  transform: scaleX(100%);
+  left:-90px;
+  bottom:30%;
+}
+.card-grid{
+  margin-top:15vh;
+}
+  
+}
+
+
+@media (max-width: 520px) {
+  .MeetUs{
+    transform: scaleX(80%);
+    left:-150px;
+    bottom:30%;
+  }
+  .card-grid{
+    margin-top:15vh;
+  }
+}
+
+
+
+@media (max-width: 420px) {
+  .nav-links a{
+    font-size: 17px; /* Reduce the font size for smaller screens */
+
+  }
+  .left-text {
+
+    left: -50%; /* Adjust the left distance from the left edge of the screen */
+    padding-top:150px;
+    
+  }
+  .nav-links li {
+    margin-left:7%;
+  }
+  .nav-links {
+    margin-right:20%;
+    display:initial;
+  }
+
+  .logo-spcwby{
+    /*left:35%;*/
+    font-size:30px;
+  }
+
+  h1 {
+    font-size: 40px !important;
+  }
+  .MeetUs{
+    transform: scaleX(70%);
+    left:-185px;
+    bottom:30%;
+  }
+  .card-grid{
+    margin-top:35vh;
+  }
+
+  #root
+{
+    
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background-image: url("./background.png");*/
+    background-color:black;
+    background-size: 100%;
+    /*background: radial-gradient(at 50% 100%, #2727c3 40%, #06068f 80%, #020263 100%);*/
+}
+  
+}
